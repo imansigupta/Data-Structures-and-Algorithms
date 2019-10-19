@@ -23,7 +23,7 @@ public class targetSum {
 				}
 			}
 		}
-//		display(tab);
+		display(tab, tar);
 		printPath(tab, tab.length - 1, tab[0].length - 1, arr, "");
 		return tab[tab.length - 1][tab[0].length - 1];
 	}
@@ -46,12 +46,13 @@ public class targetSum {
 
 	}
 
-	public static void display(boolean[][] tab) {
+	public static void display(boolean[][] tab,tar) {
 		for (int i = 0; i < tab.length; i++) {
 			for (int j = 0; j < tab[0].length; j++) {
-				System.out.print(tab[i][j] + "	");
+				System.out.print(tab[i][j] + ",	");
 			}
 			System.out.println();
 		}
+		System.out.println("Target was"+ tar);
 	}
 }
